@@ -84,10 +84,8 @@ dependencies {
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("com.google.code.gson:gson:2.10.1")
 
-    // MLC LLM (Mobile LLM Library)
-    // Note: MLC LLM provides pre-built binaries for Android
-    // We'll use the official MLC LLM Android SDK
-    implementation("ai.mlc:mlc-llm-android:0.1.0")
+    // MLC LLM - add manually as local AAR when available
+    // implementation("ai.mlc:mlc-llm-android:0.1.0")
 
     // Alternative: TFLite for model inference
     implementation("org.tensorflow:tensorflow-lite:2.14.0")
