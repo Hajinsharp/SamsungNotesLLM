@@ -87,11 +87,11 @@ dependencies {
     // MLC LLM - add manually as local AAR when available
     // implementation("ai.mlc:mlc-llm-android:0.1.0")
 
-    // Alternative: TFLite for model inference
-    implementation("org.tensorflow:tensorflow-lite:2.14.0")
-    implementation("org.tensorflow:tensorflow-lite-metadata:0.4.4")
-    implementation("org.tensorflow:tensorflow-lite-support:0.4.4")
-    implementation("org.tensorflow:tensorflow-lite-gpu:2.14.0")
+    // TFLite - re-enable when LLM integration is implemented
+    // implementation("org.tensorflow:tensorflow-lite:2.14.0")
+    // implementation("org.tensorflow:tensorflow-lite-metadata:0.4.4")
+    // implementation("org.tensorflow:tensorflow-lite-support:0.4.4")
+    // implementation("org.tensorflow:tensorflow-lite-gpu:2.14.0")
 
     // Room Database (for local note caching)
     implementation("androidx.room:room-runtime:2.6.0")
