@@ -18,6 +18,8 @@
 
 # TensorFlow Lite
 -keep class org.tensorflow.** { *; }
+-dontwarn com.google.auto.value.**
+-dontwarn org.tensorflow.lite.gpu.**
 
 # MLC LLM
 -keep class ai.mlc.** { *; }
