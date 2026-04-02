@@ -14,6 +14,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
@@ -44,8 +45,11 @@ class MainActivity : ComponentActivity() {
     }
 }
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun NotesLLMApp(viewModel: NotesLLMViewModel = viewModel { NotesLLMViewModel(androidx.compose.ui.platform.LocalContext.current) }) {
+fun NotesLLMApp() {
+    val context = LocalContext.current
+    val viewModel: NotesLLMViewModel = androidx.lifecycle.viewmodel.compose.viewModel { NotesLLMViewModel(context) }
     val uiState by viewModel.uiState.collectAsState()
 
     var showSettings by remember { mutableStateOf(false) }
