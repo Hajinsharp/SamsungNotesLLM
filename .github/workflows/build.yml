@@ -21,7 +21,10 @@ jobs:
         distribution: 'temurin'
     
     - name: Setup Gradle
-      run: gradle/actions/setup-gradle@v3
+      run: |
+        wget -q https://services.gradle.org/distributions/gradle-8.3-bin.zip -O /tmp/gradle.zip
+        unzip -q /tmp/gradle.zip -d /tmp
+        echo "/tmp/gradle-8.3/bin" >> $GITHUB_PATH
       
     - name: Build with Gradle
       run: gradle assembleRelease
